@@ -13,6 +13,7 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
     conn.write('Name: NIC')
+    console.log('Name: NIC to the server')
     // let moves = ['Move: up', 'Move: right', 'Move: up', 'Move: right'];
     // let delay = 100;
     // for (let move of moves) {
