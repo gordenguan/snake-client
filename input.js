@@ -15,6 +15,7 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
+  //keys to move snake
   if (key === 'w') {
     connection.write('Move: up');
   }
@@ -26,6 +27,16 @@ const handleUserInput = function (key) {
   }
   if (key === 'd') {
     connection.write('Move: right');
+  }
+  //key for banter
+  if (key === 'j') {
+    connection.write('Say: Hi');
+  }
+  if (key === 'k') {
+    connection.write('Say: OK');
+  }
+  if (key === 'l') {
+    connection.write('Say: GOGOGO');
   }
 }
 
