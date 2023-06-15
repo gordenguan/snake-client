@@ -1,3 +1,5 @@
+const {UP, DOWN, LEFT, RIGHT} = require('./constants');
+
 let connection
 
 //use process.stdin to receive client type data
@@ -15,18 +17,18 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  //keys to move snake
+  //keys to move snake with export const
   if (key === 'w') {
-    connection.write('Move: up');
+    connection.write(UP);
   }
   if (key === 'a') {
-    connection.write('Move: left');
+    connection.write(LEFT);
   }
   if (key === 's') {
-    connection.write('Move: down');
+    connection.write(DOWN);
   }
   if (key === 'd') {
-    connection.write('Move: right');
+    connection.write(RIGHT);
   }
   //key for banter
   if (key === 'j') {
