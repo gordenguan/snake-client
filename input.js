@@ -1,19 +1,19 @@
 const {UP, DOWN, LEFT, RIGHT} = require('./constants');
 
-let connection
+let connection;
 
 //use process.stdin to receive client type data
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-  stdin.on('data', handleUserInput)
+  stdin.on('data', handleUserInput);
   return stdin;
 };
 //terminate with ctrl + C
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
@@ -40,6 +40,6 @@ const handleUserInput = function (key) {
   if (key === 'l') {
     connection.write('Say: GOGOGO');
   }
-}
+};
 
-module.exports = {setupInput}
+module.exports = {setupInput};

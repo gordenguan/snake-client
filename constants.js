@@ -15,4 +15,4 @@ module.exports = {
   DOWN,
   LEFT,
   RIGHT,
-}
+};
